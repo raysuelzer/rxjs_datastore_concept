@@ -5,8 +5,7 @@ var ctrl = (function controller() {
         lettersStore = Stores.getOrAddStore('letters'),
         numbersStore = Stores.getOrAddStore('numbers')
     
-     
-     lettersStore.subscribe(function (data) {
+          lettersStore.subscribe(function (data) {
          console.log('letters', data.toJS());
      });
     
@@ -30,9 +29,7 @@ var ctrl = (function controller() {
             numbersStore.updateData(result);
         })
     }
-    
-    updateNumbers([1,2,3]).then(() => updateLetters('b','d','c'))
-    
+          
     
     return {
         updateLetters: updateLetters,
